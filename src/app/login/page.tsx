@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { useRouter } from "next/navigation";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence, Variants } from "framer-motion";
 import { signInWithGoogle } from "@/lib/firebase/auth";
 
 export default function LoginPage() {
@@ -25,7 +25,7 @@ export default function LoginPage() {
   };
 
   // Container variants for the entire page transition and staggered children
-  const pageVariants = {
+  const pageVariants: Variants = {
     hidden: { opacity: 0 },
     show: {
       opacity: 1,
@@ -42,7 +42,7 @@ export default function LoginPage() {
   };
 
   // Variants for fade-up elements (subheading, button)
-  const fadeUpVariants = {
+  const fadeUpVariants: Variants = {
     hidden: { opacity: 0, y: 15 },
     show: {
       opacity: 1,
@@ -52,7 +52,7 @@ export default function LoginPage() {
   };
 
   // Cinematic text-reveal variants
-  const textRevealVariants = {
+  const textRevealVariants: Variants = {
     hidden: { y: "100%" },
     show: {
       y: "0%",
