@@ -11,12 +11,6 @@ import { useAuth } from "@/components/AuthContext";
 import Link from "next/link";
 import { AlertCircle, Clock, CheckCircle, Users, Activity, Plus, X, ClipboardList, BookOpen } from "lucide-react";
 
-interface Task {
-  id: string;
-  text: string;
-  priority: 'High' | 'Normal' | 'Low';
-  due: string;
-}
 
 // Advanced Animation Variants
 const staggerContainer = {

@@ -21,13 +21,14 @@ export interface Patient {
 
 export interface Task {
   id: string;
-  patientId: string;
-  ward: string;
+  patientId?: string;
+  ward?: string;
   text: string;
-  priority: 'High Priority' | 'Routine';
+  priority: string;
   completed: boolean;
-  createdAt: number | any;
-  updatedAt: number | any;
+  due?: string;
+  createdAt?: number | any;
+  updatedAt?: number | any;
 }
 
 // --- PATIENT OPERATIONS ---
