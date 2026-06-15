@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence, Variants } from "framer-motion";
 import { onAuthStateChanged, User, updateProfile } from "firebase/auth";
 import { auth, logOut } from "@/lib/firebase/auth";
 import { doc, getDoc, setDoc, collection, query, where, onSnapshot, orderBy, addDoc, deleteDoc, serverTimestamp } from "firebase/firestore";
@@ -13,7 +13,7 @@ import { AlertCircle, Clock, CheckCircle, Users, Activity, Plus, X, ClipboardLis
 
 
 // Advanced Animation Variants
-const staggerContainer = {
+const staggerContainer: Variants = {
   hidden: { opacity: 0 },
   show: {
     opacity: 1,
@@ -24,7 +24,7 @@ const staggerContainer = {
   },
 };
 
-const fadeUpItem = {
+const fadeUpItem: Variants = {
   hidden: { opacity: 0, y: 20 },
   show: { 
     opacity: 1, 
@@ -33,7 +33,7 @@ const fadeUpItem = {
   },
 };
 
-const pageVariants = {
+const pageVariants: Variants = {
   hidden: { opacity: 0 },
   show: { opacity: 1, transition: { duration: 0.4 } },
   exit: { opacity: 0, transition: { duration: 0.3 } },
