@@ -37,7 +37,7 @@ export default function LoginPage() {
     exit: {
       opacity: 0,
       x: -20, // Prepares for right-to-left slide transition
-      transition: { ease: "easeInOut", duration: 0.3 },
+      transition: { duration: 0.3 },
     },
   };
 

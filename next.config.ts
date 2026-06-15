@@ -1,13 +1,7 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {
-  eslint: {
-    // ปิดการแจ้งเตือน ESLint ตอน Build
-    ignoreDuringBuilds: true,
-  },
-  typescript: {
-    // ปิดการแจ้งเตือน TypeScript ตอน Build
-    ignoreBuildErrors: true,
-  },
+import type { NextConfig } from "next";
+
+const nextConfig: NextConfig = {
+  /* config options here */
 };
 
 export default nextConfig;
